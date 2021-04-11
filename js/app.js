@@ -115,16 +115,19 @@ function removeItem(event) {
         email.value = list.children[5].textContent;
         select.value = list.children[6].textContent;
         
-        updatBtn.addEventListener('click', function() {
-            list.children[0].textContent = Id.value;
-            list.children[1].textContent = Name.value;
-            list.children[2].textContent = gender.value;
-            list.children[3].textContent = startData.value;
-            list.children[4].textContent = endData.value;
-            list.children[5].textContent = email.value;
-            list.children[6].textContent = select.value;
-            addStudent.style.display = "none";
-            container.style.display = "block"
+        updatBtn.addEventListener('click', function() { 
+            if  (Id.value === "" || Name.value === "" || gender.value.length === 0 || startData.value.length === 0 || endData.value.length === 0 || email.value === "") {
+                alert("All field cannot empty !")
+            }else{
+                list.children[1].textContent = Name.value;
+                list.children[2].textContent = gender.value;
+                list.children[3].textContent = startData.value;
+                list.children[4].textContent = endData.value;
+                list.children[5].textContent = email.value;
+                list.children[6].textContent = select.value;
+                addStudent.style.display = "none";
+                container.style.display = "block"
+            }
         });
     }
 }
