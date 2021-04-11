@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Kunthy_Project</title>
+</head>
+<body>
+    <!-- nav bar  -->
+    <nav>
+        <div class="nav-items">
+            <div id="bar">
+                <i class="fas fa-address-book"></i>
+                STUDENT MANAGEMENT 
+            </div>
+             
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <!-- button add new student -->
+    <button  type="button" class="btn btn-secondary" id="QuickAdd">
+        <div id="content"><i class="fas fa-user-plus" id="new"></i>Add new student</div>
+    </button>
+    <!-- list of students -->
+    <div class="body-content">
+        <h2 class="Sname"><span>List of students</span></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Start Course</th>
+                    <th>End Course</th>
+                    <th>Email</th>
+                    <th>Major</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kunthy</td>
+                    <td>Female</td>
+                    <td>2021-03-22</td>
+                    <td>2024-03-22</td>
+                    <td>example@gmail.com</td>
+                    <td>Information Technology</td>
+                    <td class="fa fa-pencil"></td>
+                    <td class="fa fa-trash-o"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Clement</td>
+                    <td>Male</td>
+                    <td>2010-03-02</td>
+                    <td>2018-03-23</td>
+                    <td>example@gmail.com</td>
+                    <td>Lawyer</td>
+                    <td class="fa fa-pencil"></td>
+                    <td class="fa fa-trash-o"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vun Yin</td>
+                    <td>Female</td>
+                    <td>2019-03-02</td>
+                    <td>2021-03-23</td>
+                    <td>example@gmail.com</td>
+                    <td>Information Technology</td>
+                    <td class="fa fa-pencil"></td>
+                    <td class="fa fa-trash-o"></td>
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+    <!-- form add student -->
+    <div class="wrapper">
+       <div class="registration_form">
+            <div class="title">
+                Registration Form
+            </div>
+    
+            <form name="fillForm">
+                <div class="form_wrap">
+                    <div class="number">
+                        <label for="number">ID</label>
+                        <input type="number" name="number" id="number" placeholder="Student ID">
+                    </div>
+                    <br>
+                    <div class="name">
+                        <label for="name">Name</label>
+                        <input type="text" name="" id="fname" placeholder="Name...">
+                    </div>
+                    <br>
+                    <div class="input_wrap">
+                        <label>Gender: </label>
+                        <input type="radio" name="gender" id="m" value="Male" class="input_radio" checked>
+                        <label for="m">Male</label>
+                        <input type="radio" name="gender" id="f" value="Female" class="input_radio">
+                        <label for="f">Female</label>
+                    </div>
+                    <label>Start Course</label>
+                    <input type="date" id="startDate">
+                    <br>
+                    <label>End Course</label>
+                    <input type="date" id="endDate">
+                    <br>
+                    <p id="warning">start date must be before endate.</p>
+                    <label>Email</label>
+                    <br>
+                    <input type="email" id="email" placeholder="Email...">
+                    <div class="color" id="color-area">
+                        <label for="">Category: </label>
+                        <select name="" id="theMajor">
+                            <option selected disabled>Choose your major</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Lawyer">Lawyer</option>
+                            <option value="Information Technology">Information Technology</option>
+                        </select>
+                    </div><br>				
+                    <div class="input_wrap">
+                        <input type="button" value="Cancel" class="cancel_btn">
+                        <input type="button" value="Update" class="update_btn">
+                        <input type="button" value="Submit" class="submit_btn">
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
